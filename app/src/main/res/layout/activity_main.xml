@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_clear_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card_view_start_anim"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_clear_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E91E63"
+            android:paddingHorizontal="10dp"
+            android:stateListAnimator="@animator/statlis"
+            android:text="@string/clear_anim"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_start_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#4CAF50"
+            android:paddingHorizontal="10dp"
+            android:text="@string/start_anim"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/img_view_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/card_view_start_anim"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_biotech_24"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txt_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_view_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="15dp"
+        android:layout_marginTop="10dp"
+        android:text="HOAI THANH"
+        android:textColor="#CF0E0E"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/img_view_3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/txt_2"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_launcher_background"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>
